@@ -4,7 +4,6 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 import os, environ
-from tkinter.tix import CObjView
 
 env = environ.Env(
     # set casting, default value
