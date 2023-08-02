@@ -27,7 +27,7 @@ DEBUG = False
 ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets') 
 
 # load production server from .env
-ALLOWED_HOSTS        = ['localhost', '185.65.202.40', 'localhost:85', 'maxone.abba.uz', 'admin.maxone.uz', '127.0.0.1', 'api.maxone.uz',               env('SERVER', default='127.0.0.1') ]
+ALLOWED_HOSTS        = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://maxone.abba.uz', 'http://localhost:85', 'http://127.0.0.1', 'https://' + env('SERVER', default='127.0.0.1') ]
 
 # Application definition
