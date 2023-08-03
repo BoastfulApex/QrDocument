@@ -78,7 +78,7 @@ def generate_qr_code(request):
     if request.method == "POST":
         docs = DocsObjects.objects.create()
         docs.save()
-        url = f'http://185.180.231.186:5600/file/{docs.id}'
+        url = f'http://my.gove.uz/file/{docs.id}'
         q = qrcode.make(url)
         q.save('qrcode.png')
         with open('qrcode.png', 'rb') as img_file:
