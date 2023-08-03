@@ -27,7 +27,7 @@ DEBUG = False
 ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets') 
 
 # load production server from .env
-ALLOWED_HOSTS        = ['*']
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://maxone.abba.uz', 'http://localhost:85', 'http://127.0.0.1', 'https://' + env('SERVER', default='127.0.0.1') ]
 
 # Application definition
@@ -126,11 +126,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = (
-    os.path.join(CORE_DIR, 'static/')
+    os.path.join(BASE_DIR, 'static/')
 )
 
 MEDIA_URL = '/files/'
-MEDIA_ROOT = os.path.join(CORE_DIR, 'files/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files/')
 
 CORS_ALLOW_ALL_ORIGINS = True
 

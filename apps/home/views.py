@@ -29,7 +29,6 @@ def pages(request):
     try:
 
         load_template = request.path.split('/')[-1]
-        print(request.path.split('/')[-1])
 
         if load_template == 'admin':
             return HttpResponseRedirect(reverse('admin:index'))
