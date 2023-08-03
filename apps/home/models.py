@@ -12,6 +12,6 @@ class DocsObjects(models.Model):
     @property
     def PhotoURL(self):
         try:
-            return self.qrcode.name
+            return self.qrcode.url
         except:
             return ''
