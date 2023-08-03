@@ -21,7 +21,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY', default='S#perS3crEt_007')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = Flase
 
 # Assets Management
 ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets') 
@@ -128,7 +128,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = (
     os.path.join(BASE_DIR, 'static/')
 )
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/')
+]
 MEDIA_URL = '/files/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files/')
 
