@@ -23,7 +23,8 @@ class GetPinForm(forms.Form):
     code = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "placeholder": "Введите PIN-код для просмотра документа",
                 "class": "form-control",
+                "id": "repopinmodel-pin_code",
+                "aria - required": "true",
             }
         ))

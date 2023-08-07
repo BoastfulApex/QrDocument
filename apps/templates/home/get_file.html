@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-param" content="_csrf-myap">
     <title>Единый портал интерактивных государственных услуг</title>
+    <link rel="icon" href="https://repository.gov.uz/img/logo_mobile.png" type="image/x-icon">
     <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
 <link href="{% static 'site.min.css' %}" rel="stylesheet">
 <link href="{% static 'site.css' %}" rel="stylesheet">
@@ -120,6 +121,12 @@ div.im-colormask > div {
         <div class="container_in">
             <div class="row dflex_repo_row">
                 <div class="col-md-6 vcenter vcenter_first">
+                            <div id="w0" class="alert-warning alert fade in">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            Пожалуйста пройдите авторизацию чтобы система определила вас. Если документ принадлежит вам, введения ПИН кода не требуется.
+            <a href="https://repository.gov.uz/auth/login">Нажмите здесь для авторизации</a>
+        </div>
+
                 <h3 class="repo_qr_info">Введите PIN-код для просмотра документа</h3>
                     <form id="w1" class="pinForm col-md-6" method="post">
                         {% csrf_token %}
